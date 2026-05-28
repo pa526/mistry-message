@@ -106,7 +106,7 @@ const Page = () => {
       router.replace(`/verify/${data.username}`)
 
     } catch (error) {
-
+      console.error('Error in signup of user', error)
       const axiosError = error as AxiosError<ApiResponse>
 
       toast.error(

@@ -18,7 +18,7 @@ export const authOptions: NextAuthOptions = {
                 try {
                     const user = await UserModel.findOne({
                         $or: [
-                            {email: credentials.email},
+                            {identifier: credentials.email},
                             {username: credentials.username}
                         ]
                     })
